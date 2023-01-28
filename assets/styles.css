@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.intro{
+    position: fixed;
+    left:4%;
+    top:10%;
+    width: 450px;
+    font-size: 40px;
+}
+.intro h1{
+    font-size: 20px;
+}
+.game{
+    width: 70%;
+    height: 300px;
+    border-bottom:1px solid black;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    margin: auto;
+    padding:5px 20px;
+}
+#character{
+    width: 50px;
+    height: 70px;
+    background:transparent;
+    position:absolute;
+    bottom: 0;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{bottom: 0%;}
+    
+    
+    30%{bottom:100px;}
+    
+
+    70%{bottom:100px;}
+    
+    
+    100%{bottom:0%;}
+}
+
+#block{
+    
+    width: 100px;
+    height: 130px;
+    position: absolute;
+    top:75%;
+    left: 1%;
+    animation: block 1s infinite linear;
+}
+@keyframes block{
+    0%{left: 95%}
+    100%{left: -25%}
+}
+
+.scores{
+    position: absolute;
+    right: 50px;
+    top:1px;
+
+}
+#scoreSpan{
+    font-weight: bold
+}
+p{
+    font-size: 4vmin;
+}
+.gameover{
+   visibility:hidden;
+    
+}
+#invisible{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.sealfac{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: -10%;
+    bottom: -15%;
+    z-index: -1;
+
+}
